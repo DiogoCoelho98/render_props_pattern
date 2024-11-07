@@ -23,7 +23,7 @@ The Render Props pattern allows for better separation of concerns by enabling a 
 Clone this repository and try it:
 
    ```bash
-   git clone https://github.com/yourusername/react-advanced-patterns-render-props.git
+   git clone https://github.com/DiogoCoelho98/render_props_pattern.git
    cd react-advanced-patterns-render-props
    npm install
    npm run dev
