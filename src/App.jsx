@@ -3,6 +3,7 @@ import List from "./List";
 import Mouse_Tracker from "./Mouse_Tracker";
 import ProductItem from "./ProductItem";
 import CompanyItem from "./CompanyItem";
+import Counter from "./Counter";
 
 // LIST OF PRODUCTS
 const products = Array.from({ length: 20 }, () => {
@@ -23,7 +24,7 @@ const companies = Array.from({ length: 15 }, () => {
 
 export default function App() {
   return (
-    <div>
+    /*<div>
       <h1>Render Props Demo</h1>
 
       <div className="col-2">
@@ -65,6 +66,24 @@ export default function App() {
           </p>
         )}
       />
+    </div> */
+    <div>
+      <h1>Compound component pattern</h1>
+      <Counter
+        icon_increase="+"
+        icon_decrease="-"
+        label="Not flexible counter"
+        hide_label={false}
+        hide_increase={false}
+        hide_decrease={false}
+      />
+
+      <Counter>
+        <Counter.Label>My flexible counter component</Counter.Label>
+        <Counter.Count_Increase icon="+" />
+        <Counter.Count_Decrease icon="-" />
+        <Counter.Count />
+      </Counter>
     </div>
   );
 }
